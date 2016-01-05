@@ -1,0 +1,5 @@
+- hosts: all
+  vars:
+  - mesos_master: "{{ MESOS_MASTER }}"
+  roles:
+  - { role: 'mesos-slave', zk_config: "zk://{{ mesos_master }}:2181/mesos" }

@@ -1,0 +1,5 @@
+- hosts: all
+  vars:
+  - mesos_dns: "{{ MESOS_DNS }}"
+  roles:
+  - { role: 'mesos-dns-client', nameserver: "{{ mesos_dns }}" }

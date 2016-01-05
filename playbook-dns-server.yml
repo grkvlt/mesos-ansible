@@ -1,0 +1,7 @@
+- hosts: all
+  vars:
+  - mesos_master: "{{ MESOS_MASTER }}"
+  - marathon_deploy: "{{ MESOS_MASTER }}"
+  - ns1: "{{ NAMESERVER }}"
+  roles:
+  - { role: 'mesos-dns-server', marathon_deploy: "{{ marathon_deploy }}", mesos_master: "{{ mesos_master }}" }

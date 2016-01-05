@@ -1,2 +1,0 @@
-# mesos-ansible
-Mesos Ansible
